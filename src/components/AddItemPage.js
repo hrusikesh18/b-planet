@@ -1,20 +1,22 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { useItems } from '../context/ItemContext';
+import Navbar from './Navbar';
 
 const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  height: 100vh;
-  background-color: #f9f9f9;
+  height: auto;
+  background-color: #faf3eb;
   padding: 40px 20px 20px 20px;
 `;
 
 const AddItemBox = styled.div`
-  background: #fff;
+  background: #faf3eb;
   padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding-top:40px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   display: flex;
   flex-direction: row;
@@ -121,6 +123,7 @@ const AddItemPage = () => {
 
   return (
     <Container>
+      <Navbar />
       <AddItemBox>
         <FormContainer>
           <Form onSubmit={handleSubmit}>

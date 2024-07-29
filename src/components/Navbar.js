@@ -7,12 +7,13 @@ import { useAuth } from '../context/AuthContext';
 const NavbarWrapper = styled.nav`
   position: fixed;
   top: 0;
-  width: 98%;
+  width: 99%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #faf3eb;
   padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   z-index: 1000;
 `;
 
