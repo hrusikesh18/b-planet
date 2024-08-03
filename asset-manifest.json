@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/b-planet/static/css/main.5531a4db.css",
-    "main.js": "/b-planet/static/js/main.43824176.js",
+    "main.js": "/b-planet/static/js/main.098329a9.js",
     "static/js/453.0a364b0f.chunk.js": "/b-planet/static/js/453.0a364b0f.chunk.js",
     "static/media/fa-solid-900.ttf": "/b-planet/static/media/fa-solid-900.07ed6d5fa32c1d54af0f.ttf",
     "static/media/default-image.jpg": "/b-planet/static/media/default-image.9ab52ffecb29a1e8f46a.jpg",
@@ -31,11 +31,11 @@
     "static/media/fa-v4compatibility.woff2": "/b-planet/static/media/fa-v4compatibility.6cfec8414be20e2c3426.woff2",
     "index.html": "/b-planet/index.html",
     "main.5531a4db.css.map": "/b-planet/static/css/main.5531a4db.css.map",
-    "main.43824176.js.map": "/b-planet/static/js/main.43824176.js.map",
+    "main.098329a9.js.map": "/b-planet/static/js/main.098329a9.js.map",
     "453.0a364b0f.chunk.js.map": "/b-planet/static/js/453.0a364b0f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5531a4db.css",
-    "static/js/main.43824176.js"
+    "static/js/main.098329a9.js"
   ]
 }
