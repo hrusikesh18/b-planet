@@ -1,12 +1,18 @@
 {
   "files": {
-    "main.css": "/b-planet/static/css/main.e6c13ad2.css",
-    "main.js": "/b-planet/static/js/main.44adaf4d.js",
+    "main.css": "/b-planet/static/css/main.5531a4db.css",
+    "main.js": "/b-planet/static/js/main.43824176.js",
     "static/js/453.0a364b0f.chunk.js": "/b-planet/static/js/453.0a364b0f.chunk.js",
+    "static/media/fa-solid-900.ttf": "/b-planet/static/media/fa-solid-900.07ed6d5fa32c1d54af0f.ttf",
     "static/media/default-image.jpg": "/b-planet/static/media/default-image.9ab52ffecb29a1e8f46a.jpg",
+    "static/media/fa-brands-400.ttf": "/b-planet/static/media/fa-brands-400.0ff70dcbf135d859ebf3.ttf",
     "static/media/hero image 2.png": "/b-planet/static/media/hero image 2.5b7a2eba9b6707523318.png",
+    "static/media/fa-solid-900.woff2": "/b-planet/static/media/fa-solid-900.93f719f4d62bfa3e748c.woff2",
+    "static/media/fa-brands-400.woff2": "/b-planet/static/media/fa-brands-400.bb8d5a145e22822103fb.woff2",
     "static/media/Hero image 1.png": "/b-planet/static/media/Hero image 1.6b3b63436e6091445dfa.png",
+    "static/media/fa-regular-400.ttf": "/b-planet/static/media/fa-regular-400.17a6e1aebccdbaa39e78.ttf",
     "static/media/Login in page image.png": "/b-planet/static/media/Login in page image.840b16884f24f039b7ac.png",
+    "static/media/fa-regular-400.woff2": "/b-planet/static/media/fa-regular-400.bc3722686635b5f86132.woff2",
     "static/media/image 18.png": "/b-planet/static/media/image 18.392db54b7b832f95ec3f.png",
     "static/media/image 19.png": "/b-planet/static/media/image 19.c28094999f34ec42b2cc.png",
     "static/media/image 11.png": "/b-planet/static/media/image 11.5e41558a3ebcf4941d3b.png",
@@ -20,14 +26,16 @@
     "static/media/image 1.png": "/b-planet/static/media/image 1.a9030ff1feba8b4daff1.png",
     "static/media/image 4.png": "/b-planet/static/media/image 4.a4f99e52c01d722e512f.png",
     "static/media/image 14-1.png": "/b-planet/static/media/image 14-1.30a67db2a482dd7b2e10.png",
+    "static/media/fa-v4compatibility.ttf": "/b-planet/static/media/fa-v4compatibility.0f6cb412603527bda691.ttf",
     "static/media/image 7.png": "/b-planet/static/media/image 7.92bec972a0497ac5c775.png",
+    "static/media/fa-v4compatibility.woff2": "/b-planet/static/media/fa-v4compatibility.6cfec8414be20e2c3426.woff2",
     "index.html": "/b-planet/index.html",
-    "main.e6c13ad2.css.map": "/b-planet/static/css/main.e6c13ad2.css.map",
-    "main.44adaf4d.js.map": "/b-planet/static/js/main.44adaf4d.js.map",
+    "main.5531a4db.css.map": "/b-planet/static/css/main.5531a4db.css.map",
+    "main.43824176.js.map": "/b-planet/static/js/main.43824176.js.map",
     "453.0a364b0f.chunk.js.map": "/b-planet/static/js/453.0a364b0f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6c13ad2.css",
-    "static/js/main.44adaf4d.js"
+    "static/css/main.5531a4db.css",
+    "static/js/main.43824176.js"
   ]
 }
