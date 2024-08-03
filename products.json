@@ -2,28 +2,16 @@ const response = await fetch('/products.json');
 
 [
 
-  {
-    "id": 1,
-    "name": "Plant 1",
-    "imageId": 1,
-    "description": "Description for Plant 1.",
-    "careGuide": {
-      "water": "Allow the soil to dry out.",
-      "light": "Bright indirect light.",
-      "tips": "Use a well-draining potting mix."
-    }
-  },
-  {
-    "id": 2,
-    "name": "Plant 2",
-    "imageId": 2,
-    "description": "Description for Plant 2.",
-    "careGuide": {
-      "water": "Water when the top inch of soil is dry.",
-      "light": "Medium to bright light.",
-      "tips": "Keep away from drafts."
-    }
-  }
+      {
+        id: 1,
+        name: 'Tree 1',
+        image: require('../src/resources/image/image 1.png')
+      },
+      {
+        id: 2,
+        name: 'Tree 1',
+        image: require('../src/resources/image/image 2.png')
+      },
 
       {
         id: 3,
