@@ -11,6 +11,8 @@ import SignupPage from './components/SignupPage';
 import AdminPage from './components/AdminPage';
 import AddItemPage from './components/AddItemPage';
 import { ItemProvider } from './context/ItemContext';
+import ProductList from './components/ProductList';
+import ProductDetail from './components/ProductDetail';
 
 const App = () => {
   return (
@@ -26,6 +28,8 @@ const App = () => {
             <Route path="/signup" element={<SignupPage />} />
             <Route path="/admin" element={<AdminPage />} />
             <Route path="/add-item" element={<AddItemPage />} />
+            <Route path="/" exact component={ProductList} />
+            <Route path="/product/:productId" component={ProductDetail} />
           </Routes>
         </AuthProvider>
       </Router>

@@ -1,0 +1,17 @@
+[
+  {
+    "username": "hrusi@gmail.com",
+    "password": "12345",
+    "role": "admin"
+  },
+  {
+    "username": "normalUser1",
+    "password": "userPass1",
+    "role": "user"
+  },
+  {
+    "username": "normalUser2",
+    "password": "userPass2",
+    "role": "user"
+  }
+]
