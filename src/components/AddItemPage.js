@@ -15,7 +15,7 @@ const Container = styled.div`
 const AddItemBox = styled.div`
   background: #faf3eb;
   padding: 20px;
-  padding-top:40px;
+  padding-top: 40px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   display: flex;
@@ -86,16 +86,26 @@ const ImagePreview = styled.img`
   border-radius: 10px;
 `;
 
+const SuccessMessage = styled.p`
+  color: green;
+  font-size: 16px;
+  margin-top: 10px;
+`;
+
 const AddItemPage = () => {
   const { addItem } = useItems();
   const [title, setTitle] = useState('');
   const [subtitle, setSubtitle] = useState('');
-  const [guide1, setGuide1] = useState('');
-  const [guide2, setGuide2] = useState('');
-  const [guide3, setGuide3] = useState('');
+  const [guide1Title, setGuide1Title] = useState('');
+  const [guide1Desc, setGuide1Desc] = useState('');
+  const [guide2Title, setGuide2Title] = useState('');
+  const [guide2Desc, setGuide2Desc] = useState('');
+  const [guide3Title, setGuide3Title] = useState('');
+  const [guide3Desc, setGuide3Desc] = useState('');
   const [description, setDescription] = useState('');
   const [image, setImage] = useState(null);
   const [imagePreview, setImagePreview] = useState(null);
+  const [successMessage, setSuccessMessage] = useState(''); // Success message state
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
@@ -111,14 +121,27 @@ const AddItemPage = () => {
       title,
       subtitle,
       guides: [
-        { guide: guide1, description: guide1 },
-        { guide: guide2, description: guide2 },
-        { guide: guide3, description: guide3 }
+        { guide: guide1Title, description: guide1Desc },
+        { guide: guide2Title, description: guide2Desc },
+        { guide: guide3Title, description: guide3Desc }
       ],
       description,
       image: imagePreview
     };
     addItem(newItem);
+    setSuccessMessage('Item added successfully!'); // Set success message
+    // Clear form fields if desired
+    setTitle('');
+    setSubtitle('');
+    setGuide1Title('');
+    setGuide1Desc('');
+    setGuide2Title('');
+    setGuide2Desc('');
+    setGuide3Title('');
+    setGuide3Desc('');
+    setDescription('');
+    setImage(null);
+    setImagePreview(null);
   };
 
   return (
@@ -138,7 +161,7 @@ const AddItemPage = () => {
               />
               <Input
                 type="text"
-                placeholder="Sub title"
+                placeholder="Subtitle"
                 value={subtitle}
                 onChange={(e) => setSubtitle(e.target.value)}
                 required
@@ -148,44 +171,44 @@ const AddItemPage = () => {
               <Title>Guide</Title>
               <Input
                 type="text"
-                placeholder="Guide 1"
-                value={guide1}
-                onChange={(e) => setGuide1(e.target.value)}
+                placeholder="Guide 1 Title"
+                value={guide1Title}
+                onChange={(e) => setGuide1Title(e.target.value)}
                 required
               />
               <Input
                 type="text"
-                placeholder="Description"
-                value={guide1}
-                onChange={(e) => setGuide1(e.target.value)}
+                placeholder="Guide 1 Description"
+                value={guide1Desc}
+                onChange={(e) => setGuide1Desc(e.target.value)}
                 required
               />
               <Input
                 type="text"
-                placeholder="Guide 2"
-                value={guide2}
-                onChange={(e) => setGuide2(e.target.value)}
+                placeholder="Guide 2 Title"
+                value={guide2Title}
+                onChange={(e) => setGuide2Title(e.target.value)}
                 required
               />
               <Input
                 type="text"
-                placeholder="Description"
-                value={guide2}
-                onChange={(e) => setGuide2(e.target.value)}
+                placeholder="Guide 2 Description"
+                value={guide2Desc}
+                onChange={(e) => setGuide2Desc(e.target.value)}
                 required
               />
               <Input
                 type="text"
-                placeholder="Guide 3"
-                value={guide3}
-                onChange={(e) => setGuide3(e.target.value)}
+                placeholder="Guide 3 Title"
+                value={guide3Title}
+                onChange={(e) => setGuide3Title(e.target.value)}
                 required
               />
               <Input
                 type="text"
-                placeholder="Description"
-                value={guide3}
-                onChange={(e) => setGuide3(e.target.value)}
+                placeholder="Guide 3 Description"
+                value={guide3Desc}
+                onChange={(e) => setGuide3Desc(e.target.value)}
                 required
               />
             </Section>
@@ -199,6 +222,7 @@ const AddItemPage = () => {
               />
             </Section>
             <Button type="submit">Add Item</Button>
+            {successMessage && <SuccessMessage>{successMessage}</SuccessMessage>} {/* Show success message */}
           </Form>
         </FormContainer>
         <ImageContainer>
