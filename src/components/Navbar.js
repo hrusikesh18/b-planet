@@ -32,8 +32,6 @@ const NavLink = styled(Link)`
   color: black;
   margin: 0 10px;
   text-decoration: none;
-
-  
 `;
 
 const ProfileImage = styled.img`
@@ -52,14 +50,22 @@ const Navbar = () => {
     navigate('/');
   };
 
+  const handleLogoClick = () => {
+    if (authState.isAuthenticated && authState.user.role === 'admin') {
+      navigate('/admin');
+    } else {
+      navigate('/');
+    }
+  };
+
   return (
     <NavbarWrapper>
-      <Logo><NavLink to="/">B.planet</NavLink></Logo>
+      <Logo onClick={handleLogoClick} style={{ cursor: 'pointer' }}>B.planet</Logo>
       <NavLinks>
         <NavLink to="/contact-us">Contact Us</NavLink>
         {authState.isAuthenticated ? (
           <>
-            {authState.isAdmin && <NavLink to="/admin">Admin</NavLink>}
+            {authState.user.role === 'admin' && <NavLink to="/admin">Admin</NavLink>}
             <NavLink to="/profile">
               <ProfileImage src="https://st3.depositphotos.com/15648834/17930/v/450/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg" alt="Profile" />
             </NavLink>
