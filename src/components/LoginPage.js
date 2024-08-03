@@ -1,4 +1,3 @@
-// src/components/LoginPage.js
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
@@ -44,7 +43,6 @@ const ImageSection = styled.div`
   background-color: rgba(0, 0, 0, 0.3);
 `;
 
-
 const StyledImage = styled.img`
   width: auto; /* Maintain aspect ratio */
   height: 300px; /* Fixed height */
@@ -53,9 +51,6 @@ const StyledImage = styled.img`
   margin: 0; /* Reset margin */
   padding: 0; /* Reset padding */
 `;
-
-
-
 
 const FormSection = styled.div`
   flex: 1;
@@ -120,15 +115,20 @@ const StyledLink = styled(Link)`
   }
 `;
 
+const ErrorMessage = styled.div`
+  color: red;
+  margin-bottom: 20px;
+`;
+
 const LoginPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const { login } = useAuth();
+  const { login, authState } = useAuth();
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    login(email, password, navigate);
+    login(email, password);
   };
 
   return (
@@ -143,6 +143,7 @@ const LoginPage = () => {
         <FormSection>
           <Heading>Login</Heading>
           <SubHeading>Welcome back !!</SubHeading>
+          {authState.error && <ErrorMessage>{authState.error}</ErrorMessage>}
           <Form onSubmit={handleSubmit}>
             <Input
               type="email"

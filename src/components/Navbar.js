@@ -18,7 +18,7 @@ const NavbarWrapper = styled.nav`
 `;
 
 const Logo = styled.div`
-  color: white;
+  color: black;
   font-size: 30px;
   font-weight: bold;
 `;
